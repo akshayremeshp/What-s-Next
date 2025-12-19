@@ -34,20 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ========== Smooth Scroll for Anchor Links ========== */
   const header = document.querySelector(".header");
-  const headerHeight = header ? header.offsetHeight : 0;
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (event) => {
       const targetId = anchor.getAttribute("href");
 
-      // ignore empty or just "#"
+      // ignore empty, "#", or non-existing target
       if (!targetId || targetId === "#") return;
 
       const target = document.querySelector(targetId);
       if (!target) return;
 
+      // only prevent default for on-page sections
       event.preventDefault();
 
+      const headerHeight = header ? header.offsetHeight : 0;
       const targetRect = target.getBoundingClientRect();
       const offsetTop = targetRect.top + window.pageYOffset - headerHeight;
 
