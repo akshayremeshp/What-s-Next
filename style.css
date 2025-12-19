@@ -39,17 +39,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.75rem;
 }
 
-h1 {
-  font-size: 3.5rem;
-}
-
-h2 {
-  font-size: 2.25rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.5rem; }
 
 p {
   margin-bottom: 1rem;
@@ -88,27 +80,23 @@ a:hover {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: var(--primary-color);
-}
-
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: var(--white);
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(30, 64, 175, 0.1));
   border-radius: 0.5rem;
-  font-weight: 700;
+  border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
-.logo-text {
-  font-size: 1.25rem;
-  color: var(--text-dark);
+.logo-img {
+  height: 5rem;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 /* Hamburger Menu */
@@ -165,9 +153,7 @@ a:hover {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
+  .menu-toggle { display: flex; }
 
   .nav {
     position: fixed;
@@ -182,9 +168,7 @@ a:hover {
     border-top: 1px solid var(--border-color);
   }
 
-  .nav.nav-open {
-    right: 0;
-  }
+  .nav.nav-open { right: 0; }
 
   .nav-list {
     flex-direction: column;
@@ -254,13 +238,8 @@ a:hover {
     min-height: 50vh;
   }
 
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
+  .hero-title { font-size: 2.5rem; }
+  .hero-subtitle { font-size: 1rem; }
 
   .hero-buttons {
     flex-direction: column;
@@ -328,9 +307,7 @@ a:hover {
   margin-bottom: 3rem;
 }
 
-.section-header h2 {
-  margin-bottom: 1rem;
-}
+.section-header h2 { margin-bottom: 1rem; }
 
 .section-header p {
   font-size: 1.1rem;
@@ -339,13 +316,8 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .section {
-    padding: 2rem 1.5rem;
-  }
-
-  .section-header {
-    margin-bottom: 2rem;
-  }
+  .section { padding: 2rem 1.5rem; }
+  .section-header { margin-bottom: 2rem; }
 }
 
 /* ========== Modules Section ========== */
@@ -362,9 +334,11 @@ a:hover {
 
 /* ========== Module Cards ========== */
 .module-card {
+  position: relative;
+  overflow: hidden;
   background-color: var(--white);
   border-radius: 0.75rem;
-  padding: 2rem;
+  padding: 0;
   border: 1px solid var(--border-color);
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
@@ -372,13 +346,23 @@ a:hover {
   flex-direction: column;
 }
 
+.module-link {
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 2rem;
+  color: inherit;
+  text-decoration: none;
+}
+
 .module-card:hover {
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16);
   transform: translateY(-4px);
   border-color: var(--primary-color);
 }
 
-.card-header h3 {
+/* content */
+.module-content h3 {
   color: var(--text-dark);
   margin-bottom: 1rem;
   font-size: 1.35rem;
@@ -403,21 +387,38 @@ a:hover {
   margin-left: 0.25rem;
 }
 
+/* Very light blue overlay */
+.module-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(37, 99, 235, 0.08); /* soft blue tint */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.module-card:hover .module-overlay {
+  opacity: 1; /* 8% blue, text stays clear */
+}
+
+/* Do NOT change text colors on hover; keep them crisp */
+.module-card:hover .module-content h3,
+.module-card:hover .module-content p,
+.module-card:hover .card-link {
+  color: inherit;
+}
+
 @media (max-width: 768px) {
   .modules-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .module-card {
-    padding: 1.5rem;
-  }
+  .module-link { padding: 1.5rem; }
 }
 
 /* ========== About Section ========== */
-.about {
-  background-color: var(--white);
-}
+.about { background-color: var(--white); }
 
 .about-content {
   max-width: 700px;
@@ -477,7 +478,7 @@ a:hover {
   color: var(--white);
 }
 
-/* ========== Module Pages (After 10th, Plus Two, etc.) ========== */
+/* ========== Module Pages ========== */
 .module-page {
   max-width: 900px;
   margin: 0 auto;
@@ -546,18 +547,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .module-page {
-    padding: 2rem 1.5rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
+  .module-page { padding: 2rem 1.5rem; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
 }
 
 /* ========== Utility Classes ========== */
-.text-center {
+.text-center { text-align: center; }
