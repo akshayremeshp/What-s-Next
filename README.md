@@ -180,6 +180,7 @@ What-s-Next/
 ✅ **SEO Optimized** - Proper HTML semantics and structure  
 ✅ **Accessibility** - ARIA labels and semantic HTML for screen readers  
 ✅ **Auto-Deployment** - GitHub Actions workflow for continuous deployment  
+✅ **Instant Support via WhatsApp** - Floating contact button for real-time student feedback and mentorship queries
 
 ---
 
@@ -194,6 +195,7 @@ This platform represents years of mentoring experience, real-world industry insi
 ## 📞 Contact & Support
 
 **Email:** [akshayremeshp47@gmail.com](mailto:akshayremeshp47@gmail.com)
+- **WhatsApp** (NEW): Use the floating WhatsApp button on the website for instant support and quick queries
 
 **Interested in:**
 - Mentorship sessions? Get in touch!
@@ -347,4 +349,23 @@ Special thanks to all students and educators who have provided feedback and supp
 
 **Live Site:** [https://akshayremeshp.github.io/What-s-Next/](https://akshayremeshp.github.io/What-s-Next/)
 
-**Last Updated:** December 7, 2025
+**Last Updated:** December 19, 2025
+
+## 📦 Version History
+
+### v1.1.1 (Day 4 - December 19, 2025)
+**Enhancements:**
+- ✨ Added floating WhatsApp contact button for instant student support & feedback
+- 🎨 Refined logo design and visual branding consistency across the platform
+- 📱 Improved mobile responsiveness with updated styling
+
+**Technical Updates:**
+- Integrated WhatsApp API via `script.js` for seamless messaging experience
+- Enhanced CSS styling for floating button animations
+- Updated `logo.png` with improved visual identity
+
+### v1.1 (December 7, 2025)
+Added LinkedIn Mastery module with comprehensive strategies for professional networking and personal branding.
+
+### v1.0 (Launch)
+Initial release with 7 core mentorship modules deployed via GitHub Pages.
