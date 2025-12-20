@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | What's Next</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --bg: #0b1120;
+      --bg-soft: #020617;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-soft: rgba(148, 163, 184, 0.3);
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
+      color: var(--text-main);
+    }
+
+    .pp-shell {
+      min-height: 100vh;
+      padding: 32px 16px 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .pp-container {
+      width: 100%;
+      max-width: 920px;
+      background: radial-gradient(
+          circle at top left,
+          rgba(37, 99, 235, 0.18),
+          transparent 55%
+        ),
+        radial-gradient(
+          circle at bottom right,
+          rgba(59, 130, 246, 0.14),
+          transparent 55%
+        ),
+        linear-gradient(135deg, #020617, #020617 40%, #020617 100%);
+      border-radius: 24px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 30px 90px rgba(15, 23, 42, 0.9);
+      padding: 28px 24px 32px;
+      backdrop-filter: blur(18px);
+    }
+
+    @media (min-width: 768px) {
+      .pp-container {
+        padding: 32px 40px 40px;
+      }
+    }
+
+    /* Header */
+    .pp-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      background: rgba(37, 99, 235, 0.13);
+      color: #bfdbfe;
+      border: 1px solid rgba(59, 130, 246, 0.45);
+    }
+
+    .pp-tag-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+    }
+
+    .pp-title-row {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .pp-title-main {
+      font-size: clamp(1.9rem, 4vw, 2.3rem);
+      letter-spacing: 0.02em;
+      color: #f9fafb;
+    }
+
+    .pp-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 320px;
+    }
+
+    .pp-meta {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+    }
+
+    .pp-meta strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    /* Divider */
+    .pp-divider {
+      margin: 20px 0 18px;
+      height: 1px;
+      border: none;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(148, 163, 184, 0.4),
+        transparent
+      );
+    }
+
+    /* Layout: TOC + Content */
+    .pp-layout {
+      display: grid;
+      gap: 26px;
+    }
+
+    @media (min-width: 900px) {
+      .pp-layout {
+        grid-template-columns: 260px minmax(0, 1fr);
+        align-items: flex-start;
+      }
+    }
+
+    /* TOC */
+    .pp-toc {
+      position: sticky;
+      top: 20px;
+      padding: 14px 14px 16px;
+      background: radial-gradient(
+          circle at top left,
+          rgba(30, 64, 175, 0.36),
+          transparent 60%
+        ),
+        rgba(15, 23, 42, 0.95);
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .pp-toc-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #e5e7eb;
+    }
+
+    .pp-toc-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .pp-toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.86rem;
+    }
+
+    .pp-toc-list li + li {
+      margin-top: 6px;
+    }
+
+    .pp-toc-link {
+      display: block;
+      padding: 6px 8px;
+      border-radius: 10px;
+      color: #cbd5f5;
+      text-decoration: none;
+      transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+    }
+
+    .pp-toc-link span {
+      opacity: 0.65;
+      margin-right: 4px;
+    }
+
+    .pp-toc-link:hover {
+      background: rgba(37, 99, 235, 0.2);
+      color: #eff6ff;
+      transform: translateX(2px);
+    }
+
+    /* Content */
+    .pp-content {
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    .pp-section {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    .pp-section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .pp-section h2 {
+      font-size: 1.08rem;
+      margin-bottom: 6px;
+      color: #e5e7eb;
+    }
+
+    .pp-section p {
+      margin: 0 0 8px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .pp-section ul {
+      margin: 6px 0 10px 1.2rem;
+      padding: 0;
+      color: var(--text-muted);
+    }
+
+    .pp-section li {
+      margin-bottom: 4px;
+    }
+
+    .pill-inline {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      background: rgba(37, 99, 235, 0.18);
+      color: #bfdbfe;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+    }
+
+    /* Footer note */
+    .pp-footer-note {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed rgba(55, 65, 81, 0.9);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .pp-footer-note a {
+      color: #bfdbfe;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+  </style>
+</head>
+<body>
+  <div class="pp-shell">
+    <article class="pp-container">
+      <div class="pp-tag">
+        <span class="pp-tag-dot"></span>
+        Privacy &amp; Data Protection
+      </div>
+
+      <div class="pp-title-row">
+        <div>
+          <h1 class="pp-title-main">Privacy Policy</h1>
+          <p class="pp-subtitle">
+            This page explains how <strong>What's Next</strong> collects, uses, and protects
+            your information when you use our website, tools, and mentorship services.
+          </p>
+        </div>
+      </div>
+
+      <div class="pp-meta">
+        <span><strong>Last updated:</strong> 20 December 2025</span>
+        <span><strong>Applies to:</strong> website, forms, WhatsApp &amp; email support</span>
+      </div>
+
+      <hr class="pp-divider" />
+
+      <div class="pp-layout">
+        <!-- TOC -->
+        <aside class="pp-toc" aria-label="Privacy policy sections">
+          <div class="pp-toc-title">On this page</div>
+          <p class="pp-toc-note">
+            Use the links below to quickly jump to each section.
+          </p>
+          <ul class="pp-toc-list">
+            <li><a class="pp-toc-link" href="#pp-consent"><span>01</span>Consent &amp; scope</a></li>
+            <li><a class="pp-toc-link" href="#pp-info-we-collect"><span>02</span>Information we collect</a></li>
+            <li><a class="pp-toc-link" href="#pp-how-we-use"><span>03</span>How we use information</a></li>
+            <li><a class="pp-toc-link" href="#pp-logs-cookies"><span>04</span>Log data &amp; cookies</a></li>
+            <li><a class="pp-toc-link" href="#pp-third-parties"><span>05</span>Third‑party services</a></li>
+            <li><a class="pp-toc-link" href="#pp-data-rights"><span>06</span>Your rights &amp; choices</a></li>
+            <li><a class="pp-toc-link" href="#pp-contact"><span>07</span>Contact details</a></li>
+          </ul>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="pp-content">
+          <section id="pp-consent" class="pp-section">
+            <h2>Consent &amp; scope</h2>
+            <p>
+              By using the What's Next website or interacting with us via forms,
+              WhatsApp, email, or other channels, you consent to this Privacy Policy
+              and agree to its terms.
+            </p>
+            <p>
+              This policy currently covers our public website, lead‑capture forms,
+              communication channels, and any other touchpoints that directly link
+              to this page.
+            </p>
+          </section>
+
+          <section id="pp-info-we-collect" class="pp-section">
+            <h2>Information we collect</h2>
+            <p>We may collect the following types of information:</p>
+            <ul>
+              <li>Basic contact details such as your name, email address, and phone number.</li>
+              <li>Messages and details you share when you contact us for guidance or mentorship.</li>
+              <li>Information about your education, interests, and goals when you fill out our forms.</li>
+              <li>Technical information such as IP address, browser type, and device information.</li>
+            </ul>
+          </section>
+
+          <section id="pp-how-we-use" class="pp-section">
+            <h2>How we use your information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+              <li>Provide, operate, and improve our website, products, and mentorship services.</li>
+              <li>Understand how learners use our content so we can improve modules and guidance.</li>
+              <li>Communicate with you about updates, reminders, and relevant opportunities.</li>
+              <li>
+                Protect our users and services from fraud, abuse, or security risks and to comply
+                with applicable laws.
+              </li>
+            </ul>
+            <p>
+              Wherever required by law, we rely on your consent or our legitimate interests to process
+              personal data in a responsible way.
+            </p>
+          </section>
+
+          <section id="pp-logs-cookies" class="pp-section">
+            <h2>Log data &amp; cookies</h2>
+            <p>
+              Like many sites, we may collect log data such as IP address, browser type,
+              referring pages, and timestamps when you visit our website.
+            </p>
+            <p>
+              We may use cookies or similar technologies to remember your preferences and
+              understand how you interact with our pages so we can improve the experience.
+            </p>
+          </section>
+
+          <section id="pp-third-parties" class="pp-section">
+            <h2>Third‑party services</h2>
+            <p>
+              We may use trusted third‑party tools (for example, analytics, form handling,
+              or communication platforms) to help us operate and improve What's Next.
+            </p>
+            <p>
+              These providers process limited information on our behalf and are expected to
+              handle data in line with their own privacy policies and applicable regulations.
+            </p>
+          </section>
+
+          <section id="pp-data-rights" class="pp-section">
+            <h2>Your rights &amp; choices</h2>
+            <p>
+              Depending on your location, you may have rights over your personal data,
+              including the right to:
+            </p>
+            <ul>
+              <li>Request access to the personal information we hold about you.</li>
+              <li>Ask us to update, correct, or delete certain information.</li>
+              <li>Limit or object to specific types of processing where applicable.</li>
+              <li>Withdraw consent where processing is based on consent.</li>
+            </ul>
+            <p>
+              To exercise these rights, reach out to us using the contact details below with
+              a clear description of your request.
+            </p>
+          </section>
+
+          <section id="pp-contact" class="pp-section">
+            <h2>Contact us</h2>
+            <p>
+              If you have questions about this Privacy Policy or our data practices, you can contact us at:
+            </p>
+            <p>
+              <strong>Email:</strong> akshayremeshp47@gmail.com<br />
+              <strong>Subject line suggestion:</strong>
+              <span class="pill-inline">Privacy policy / data request</span>
+            </p>
+          </section>
+
+          <div class="pp-footer-note">
+            This design is for presentation only. Make sure the final content of your
+            Privacy Policy is reviewed for legal accuracy and compliance with applicable
+            data protection laws in your region.
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

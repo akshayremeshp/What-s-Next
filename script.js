@@ -1,56 +1,59 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
-  /* ========== Hamburger Menu Toggle ========== */
+  const header = document.querySelector(".header");
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav");
 
+  /* ========== Hamburger Menu ========== */
   if (menuToggle && nav) {
-    // Open / close on button click
-    menuToggle.addEventListener("click", (event) => {
-      event.stopPropagation(); // prevent outside-click handler from instantly closing
+    // Toggle menu on button click
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+
       nav.classList.toggle("nav-open");
       menuToggle.classList.toggle("is-open");
+
+      const isOpen = menuToggle.classList.contains("is-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Close on nav-link click
-    const navLinks = nav.querySelectorAll(".nav-link");
-    navLinks.forEach((link) => {
+    // Close menu when a nav link is clicked
+    nav.querySelectorAll(".nav-link").forEach((link) => {
       link.addEventListener("click", () => {
         nav.classList.remove("nav-open");
         menuToggle.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
       });
     });
 
-    // Close when clicking outside header / nav
-    document.addEventListener("click", (event) => {
-      const clickedInsideHeader = event.target.closest(".header");
-      if (!clickedInsideHeader) {
+    // Close menu when clicking outside the header
+    document.addEventListener("click", (e) => {
+      const insideHeader = e.target.closest(".header");
+
+      if (!insideHeader) {
         nav.classList.remove("nav-open");
         menuToggle.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
       }
     });
   }
 
-  /* ========== Smooth Scroll for Anchor Links ========== */
-  const header = document.querySelector(".header");
+  /* ========== Smooth Scroll with Header Offset ========== */
+  const headerHeight = header ? header.offsetHeight : 0;
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", (event) => {
+    anchor.addEventListener("click", (e) => {
       const targetId = anchor.getAttribute("href");
 
-      // ignore empty, "#", or non-existing target
+      // Ignore empty, "#" only, or non-existent targets
       if (!targetId || targetId === "#") return;
 
       const target = document.querySelector(targetId);
       if (!target) return;
 
-      // only prevent default for on-page sections
-      event.preventDefault();
+      e.preventDefault();
 
-      const headerHeight = header ? header.offsetHeight : 0;
-      const targetRect = target.getBoundingClientRect();
-      const offsetTop = targetRect.top + window.pageYOffset - headerHeight;
+      const rect = target.getBoundingClientRect();
+      const offsetTop = rect.top + window.pageYOffset - headerHeight;
 
       window.scrollTo({
         top: offsetTop,

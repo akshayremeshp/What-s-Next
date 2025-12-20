@@ -5,28 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What's Next | Akshay Remesh P</title>
 
-  <!-- main stylesheet -->
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="assets/images/logo.png" />
 </head>
 <body>
-  <!-- Header + Hamburger -->
+  <!-- HEADER -->
   <header class="header">
     <div class="header-container">
-      <div class="logo">
-        <!-- use your official logo file in assets -->
-        <img src="logo.png" alt="What's Next Logo" class="logo-img">
-      </div>
+      <a href="#hero" class="logo" aria-label="What's Next home">
+        <img src="logo.png" alt="What's Next logo" class="logo-img" />
+      </a>
 
-      <!-- Hamburger icon -->
-      <button class="menu-toggle" aria-label="Open navigation">
+      <!-- Hamburger -->
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
 
       <!-- Navigation -->
-      <nav class="nav">
+      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
         <ul class="nav-list">
           <li><a href="#hero" class="nav-link">Home</a></li>
           <li><a href="#modules" class="nav-link">Modules</a></li>
@@ -37,196 +42,223 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">What's Next !!</h1>
-      <p class="hero-subtitle">
-        Clear steps after 10th, Plus Two, and college – with practical guidance,
-        mentorship, and skill plans that actually fit your life.
-      </p>
-      <p class="hero-founder">
-        Founder &amp; CEO: <strong>Akshay Remesh P</strong>
-      </p>
-      <div class="hero-buttons">
-        <a href="#modules" class="btn btn-primary">Explore modules</a>
-        <a href="#contact" class="btn btn-secondary">Get in touch</a>
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">What's Next !!</h1>
+          <p class="hero-subtitle">
+            Clear steps after 10th, Plus Two, and college – with practical guidance,
+            mentorship, and skill plans that actually fit your life.
+          </p>
+          <p class="hero-founder">
+            Founder &amp; CEO: <strong>Akshay Remesh P</strong>
+          </p>
+          <div class="hero-buttons">
+            <a href="#modules" class="btn btn-primary">Explore modules</a>
+            <a href="#contact" class="btn btn-secondary">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <h3>Clarity for your next step</h3>
+            <p>
+              Structured paths, checklists, and guidance so you know exactly what to do
+              in the next 3–12 months.
+            </p>
+          </div>
+          <div class="hero-pill">For school &amp; college students</div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Modules Overview Section -->
-  <section id="modules" class="section modules">
-    <div class="section-header">
-      <h2>Choose what you need help with</h2>
-      <p>Start from where you are right now – school, plus two, or college.</p>
-    </div>
+    <!-- MODULES -->
+    <section id="modules" class="section modules">
+      <header class="section-header">
+        <h2>Choose what you need help with</h2>
+        <p>Start from where you are right now – school, plus two, or college.</p>
+      </header>
 
-    <div class="modules-grid">
-      <!-- Module 1: After 10th -->
-      <article class="module-card">
-        <a href="after10th.html" class="module-link">
-          <div class="module-content">
-            <h3>After 10th – What's Next?</h3>
-            <p class="card-description">
-              Understand streams, fields, and realistic options based on your interests
-              and willingness to study.
-            </p>
-            <span class="card-link module-cta">Know more →</span>
-          </div>
-          <div class="module-overlay"></div>
+      <div class="modules-grid">
+        <!-- After 10th -->
+        <article class="module-card">
+          <a href="after10th.html" class="module-link">
+            <div class="module-content">
+              <h3>After 10th – What's Next?</h3>
+              <p class="card-description">
+                Understand streams, fields, and realistic options based on your interests
+                and willingness to study.
+              </p>
+              <span class="card-link module-cta">Know more →</span>
+            </div>
+            <div class="module-overlay"></div>
+          </a>
+        </article>
+
+        <!-- After Plus Two -->
+        <article class="module-card">
+          <a href="plusTwo.html" class="module-link">
+            <div class="module-content">
+              <h3>After Plus Two – What's Next?</h3>
+              <p class="card-description">
+                Pick the right degree, skill track, or alternative path aligned with your strengths and goals.
+              </p>
+              <span class="card-link module-cta">Know more →</span>
+            </div>
+            <div class="module-overlay"></div>
+          </a>
+        </article>
+
+        <!-- Mentorship -->
+        <article class="module-card">
+          <a href="mentorship.html" class="module-link">
+            <div class="module-content">
+              <h3>Mentorship &amp; Assistance</h3>
+              <p class="card-description">
+                1‑1 guidance to choose your path, clear doubts, and stay accountable as you move forward.
+              </p>
+              <span class="card-link module-cta">Know more →</span>
+            </div>
+            <div class="module-overlay"></div>
+          </a>
+        </article>
+
+        <!-- Routine Planning -->
+        <article class="module-card">
+          <a href="routinePlanning.html" class="module-link">
+            <div class="module-content">
+              <h3>Routine Planning for Upskilling</h3>
+              <p class="card-description">
+                Personalized weekly plans for coding, tech, or language skills based on your schedule.
+              </p>
+              <span class="card-link module-cta">Know more →</span>
+            </div>
+            <div class="module-overlay"></div>
+          </a>
+        </article>
+
+        <!-- Extra Skills -->
+        <article class="module-card">
+          <a href="extraSkills.html" class="module-link">
+            <div class="module-content">
+              <h3>Extra Skills for Students</h3>
+              <p class="card-description">
+                LinkedIn setup, profile building, language fluency, and basic professionalism for the real world.
+              </p>
+              <span class="card-link module-cta">Know more →</span>
+            </div>
+            <div class="module-overlay"></div>
+          </a>
+        </article>
+
+        <!-- LinkedIn Mastery -->
+        <article class="module-card">
+          <a href="linkedinMastery.html" class="module-link">
+            <div class="module-content">
+              <h3>LinkedIn Mastery</h3>
+              <p class="card-description">
+                Build your professional brand from scratch. LinkedIn basics for students
+                and advanced growth strategies for freshers and professionals.
+              </p>
+              <span class="card-link module-cta">Know more →</span>
+            </div>
+            <div class="module-overlay"></div>
+          </a>
+        </article>
+
+        <!-- College & Interviews -->
+        <article class="module-card">
+          <a href="collegeInterviews.html" class="module-link">
+            <div class="module-content">
+              <h3>College Students &amp; Interviews</h3>
+              <p class="card-description">
+                Basics for cracking interviews – appearance, communication style, and building real confidence.
+              </p>
+              <span class="card-link module-cta">Know more →</span>
+            </div>
+            <div class="module-overlay"></div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT FOUNDER -->
+    <section id="about-founder" class="section about">
+      <header class="section-header">
+        <h2>About Founder</h2>
+      </header>
+      <div class="about-content">
+        <p>
+          What's Next is built by <strong>Mr. Akshay Remesh P</strong>, a tech professional who has walked
+          the same path from school confusion to clear, skill‑based careers.
+        </p>
+        <p>
+          This platform is created to translate real industry experience into simple, actionable steps
+          for school and college students pursuing tech and beyond.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <header class="section-header">
+        <h2>Ready to plan what's next?</h2>
+        <p>Share your details and get a structured starting point for your journey.</p>
+      </header>
+
+      <div class="contact-body">
+        <a href="mailto:akshayremeshp47@gmail.com" class="btn btn-primary">
+          Email to get started
         </a>
-      </article>
 
-      <!-- Module 2: After Plus Two -->
-      <article class="module-card">
-        <a href="plusTwo.html" class="module-link">
-          <div class="module-content">
-            <h3>After Plus Two – What's Next?</h3>
-            <p class="card-description">
-              Pick the right degree, skill track, or alternative path aligned with your strengths and goals.
-            </p>
-            <span class="card-link module-cta">Know more →</span>
-          </div>
-          <div class="module-overlay"></div>
+        <a
+          href="https://wa.me/918547302117?text=Hi%20Akshay,%20I%20am%20interested%20in%20What%27s%20Next%20mentorship"
+          target="_blank"
+          rel="noreferrer"
+          class="btn btn-secondary whatsapp-btn"
+        >
+          Chat on WhatsApp
         </a>
-      </article>
+      </div>
+    </section>
+  </main>
 
-      <!-- Module 3: Mentorship -->
-      <article class="module-card">
-        <a href="mentorship.html" class="module-link">
-          <div class="module-content">
-            <h3>Mentorship &amp; Assistance</h3>
-            <p class="card-description">
-              1‑1 guidance to choose your path, clear doubts, and stay accountable as you move forward.
-            </p>
-            <span class="card-link module-cta">Know more →</span>
-          </div>
-          <div class="module-overlay"></div>
-        </a>
-      </article>
-
-      <!-- Module 4: Routine Planning -->
-      <article class="module-card">
-        <a href="routinePlanning.html" class="module-link">
-          <div class="module-content">
-            <h3>Routine Planning for Upskilling</h3>
-            <p class="card-description">
-              Personalized weekly plans for coding, tech, or language skills based on your schedule.
-            </p>
-            <span class="card-link module-cta">Know more →</span>
-          </div>
-          <div class="module-overlay"></div>
-        </a>
-      </article>
-
-      <!-- Module 5: Extra Skills -->
-      <article class="module-card">
-        <a href="extraSkills.html" class="module-link">
-          <div class="module-content">
-            <h3>Extra Skills for Students</h3>
-            <p class="card-description">
-              LinkedIn setup, profile building, language fluency, and basic professionalism for the real world.
-            </p>
-            <span class="card-link module-cta">Know more →</span>
-          </div>
-          <div class="module-overlay"></div>
-        </a>
-      </article>
-
-      <!-- Module 6: LinkedIn Mastery -->
-      <article class="module-card">
-        <a href="linkedinMastery.html" class="module-link">
-          <div class="module-content">
-            <h3>LinkedIn Mastery</h3>
-            <p class="card-description">
-              Build your professional brand from scratch. LinkedIn basics for students
-              and advanced growth strategies for freshers and professionals.
-            </p>
-            <span class="card-link module-cta">Know more →</span>
-          </div>
-          <div class="module-overlay"></div>
-        </a>
-      </article>
-
-      <!-- Module 7: College & Interviews -->
-      <article class="module-card">
-        <a href="collegeInterviews.html" class="module-link">
-          <div class="module-content">
-            <h3>College Students &amp; Interviews</h3>
-            <p class="card-description">
-              Basics for cracking interviews – appearance, communication style, and building real confidence.
-            </p>
-            <span class="card-link module-cta">Know more →</span>
-          </div>
-          <div class="module-overlay"></div>
-        </a>
-      </article>
-    </div>
-  </section>
-
-  <!-- About Founder Section -->
-  <section id="about-founder" class="section about">
-    <div class="section-header">
-      <h2>About Founder</h2>
-    </div>
-    <div class="about-content">
-      <p>
-        What's Next is built by <strong>Mr.Akshay Remesh P</strong>, a tech professional who has walked
-        the same path from school confusion to clear, skill-based careers.
-      </p>
-      <p>
-        This platform is created to translate real industry experience into simple, actionable steps
-        for school and college students pursuing tech and beyond.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <div class="section-header">
-      <h2>Ready to plan what's next?</h2>
-      <p>Share your details and get a structured starting point for your journey.</p>
-    </div>
-    <div class="contact-body">
-      <a href="mailto:akshayremeshp47@gmail.com" class="btn btn-primary">
-        Email to get started
-      </a>
-
-      <!-- WhatsApp button (section) -->
-      <a
-        href="https://wa.me/918547302117?text=Hi%20Akshay,%20I%20am%20interested%20in%20What%27s%20Next%20mentorship"
-        target="_blank"
-        class="btn btn-secondary whatsapp-btn"
-      >
-        Chat on WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
     <p>© <span id="year"></span> What's Next · Akshay Remesh P</p>
   </footer>
 
-  <!-- Floating WhatsApp Icon -->
+  <!-- FLOATING WHATSAPP -->
   <a
     href="https://wa.me/918547302117?text=Hi%20Akshay,%20I%20am%20interested%20in%20What%27s%20Next%20mentorship"
     class="whatsapp-float"
     target="_blank"
+    rel="noreferrer"
     aria-label="Chat on WhatsApp"
   >
-    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#ffffff" d="M16 3C9.373 3 4 8.373 4 15c0 2.65.816 5.102 2.223 7.146L4 29l6.049-2.008A11.959 11.959 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 21c-1.74 0-3.417-.403-4.92-1.163l-.353-.17-3.595 1.195 1.2-3.518-.183-.365A8.986 8.986 0 0 1 7 15c0-4.962 4.038-9 9-9s9 4.038 9 9-4.038 9-9 9z"/>
-      <path fill="#ffffff" d="M21.276 19.17c-.316-.158-1.872-.924-2.164-1.029-.291-.104-.503-.158-.714.158-.211.316-.813 1.029-.997 1.24-.183.211-.366.237-.682.079-.316-.158-1.332-.49-2.536-1.566-.938-.835-1.57-1.868-1.75-2.184-.183-.316-.02-.486.139-.644.143-.142.316-.369.474-.554.158-.183.211-.316.316-.526.105-.211.053-.395-.026-.553-.079-.158-.714-1.72-.979-2.357-.258-.619-.52-.535-.714-.545l-.607-.011c-.211 0-.553.079-.844.395s-1.109 1.083-1.109 2.641c0 1.558 1.135 3.062 1.294 3.274.158.211 2.236 3.414 5.414 4.786 3.179 1.373 3.179.915 3.765.859.587-.053 1.872-.76 2.137-1.492.266-.733.266-1.362.186-1.492-.079-.132-.291-.211-.607-.37z"/>
+    <svg
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+      focusable="false"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill="#ffffff"
+        d="M16 3C9.373 3 4 8.373 4 15c0 2.65.816 5.102 2.223 7.146L4 29l6.049-2.008A11.959 11.959 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 21c-1.74 0-3.417-.403-4.92-1.163l-.353-.17-3.595 1.195 1.2-3.518-.183-.365A8.986 8.986 0 0 1 7 15c0-4.962 4.038-9 9-9s9 4.038 9 9-4.038 9-9 9z"
+      />
+      <path
+        fill="#ffffff"
+        d="M21.276 19.17c-.316-.158-1.872-.924-2.164-1.029-.291-.104-.503-.158-.714.158-.211.316-.813 1.029-.997 1.24-.183.211-.366.237-.682.079-.316-.158-1.332-.49-2.536-1.566-.938-.835-1.57-1.868-1.75-2.184-.183-.316-.02-.486.139-.644.143-.142.316-.369.474-.554.158-.183.211-.316.316-.526.105-.211.053-.395-.026-.553-.079-.158-.714-1.72-.979-2.357-.258-.619-.52-.535-.714-.545l-.607-.011c-.211 0-.553.079-.844.395s-1.109 1.083-1.109 2.641c0 1.558 1.135 3.062 1.294 3.274.158.211 2.236 3.414 5.414 4.786 3.179 1.373 3.179.915 3.765.859.587-.053 1.872-.76 2.137-1.492.266-.733.266-1.362.186-1.492-.079-.132-.291-.211-.607-.37z"
+      />
     </svg>
   </a>
 
-  <!-- JS -->
+  <!-- SCRIPTS -->
   <script src="script.js"></script>
   <script>
-    // simple year update
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
