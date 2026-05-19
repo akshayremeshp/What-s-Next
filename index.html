@@ -225,6 +225,38 @@
     </section>
   </main>
 
+  <!-- CHAT WIDGET -->
+  <aside class="chat-widget" aria-label="Quick chat">
+    <button class="chat-toggle" type="button" aria-expanded="false" aria-label="Open chat">
+      <span class="chat-icon">💬</span>
+      <span>Chat</span>
+    </button>
+
+    <div class="chat-panel" hidden>
+      <div class="chat-header">
+        <div>
+          <strong>Need help choosing?</strong>
+          <p>Ask about after 10th, Plus Two, mentoring, or next steps.</p>
+        </div>
+        <button class="chat-close" type="button" aria-label="Close chat">×</button>
+      </div>
+
+      <div class="chat-messages" aria-live="polite"></div>
+
+      <div class="chat-actions">
+        <button type="button" class="quick-reply">After 10th</button>
+        <button type="button" class="quick-reply">Plus Two</button>
+        <button type="button" class="quick-reply">Mentorship</button>
+      </div>
+
+      <form class="chat-form">
+        <label for="chat-input" class="sr-only">Type your message</label>
+        <input id="chat-input" type="text" placeholder="Type a question..." autocomplete="off" />
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </aside>
+
   <!-- FOOTER -->
   <footer class="footer">
     <p>© <span id="year"></span> What's Next · Akshay Remesh P</p>
@@ -257,8 +289,5 @@
 
   <!-- SCRIPTS -->
   <script src="script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
